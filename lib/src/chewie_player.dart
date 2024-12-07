@@ -639,7 +639,7 @@ class ChewieController extends ChangeNotifier {
       ]);
     } else {
       SystemChrome.setPreferredOrientations([
-        DeviceOrientation.landscapeLeft,
+        DeviceOrientation.landscapeRight,
       ]);
     }
     notifyListeners();
