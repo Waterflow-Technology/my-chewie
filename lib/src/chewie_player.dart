@@ -632,6 +632,16 @@ class ChewieController extends ChangeNotifier {
 
   void toggleFullScreen() {
     _isFullScreen = !_isFullScreen;
+
+    if (_isFullScreen) {
+      SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitUp,
+      ]);
+    } else {
+      SystemChrome.setPreferredOrientations([
+        DeviceOrientation.landscapeLeft,
+      ]);
+    }
     notifyListeners();
   }
 
